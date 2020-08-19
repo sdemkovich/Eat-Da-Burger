@@ -1,0 +1,76 @@
+<div class="container-fluid mb-4">
+    <h1 class="text-center text-white display-3"><u>Eat-Da-Burger!</u></h1>
+</div>
+
+<div class="container text-white mb-3">
+    <div class="row">
+        <div class="col-12 col-md-4 text-center">
+            <h2>Add a Burger</h2>
+        </div>
+        <div class="col-12 col-md-4 text-center d-flex justify-content-center">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="col-form-label-lg mr-2">Name:</label>
+                    <input type="text" id="burger-text" class="form-control">
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+            <button type="submit" id="add-burger" class="btn btn-success">Add Burger</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid text-center">
+    <div class="row">
+
+        <div class="col-12 col-lg-6">
+            <table class="table table-light table-bordered table-striped table-hover">
+                <thead>
+                    <tr class="table-primary">
+                        <th scope="col">ID</th>
+                        <th scope="col">MENU</th>
+                        <th scope="col">Devour?</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                {{#each burger}}
+                {{#unless devoured}}
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{burger_name}}</td>
+                    <td><button class="devour btn btn-primary" data-id={{id}}>Devour</button></td>
+                </tr>
+                {{/unless}}
+                {{/each}}
+            </table>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <table class="table table-light table-bordered table-striped table-hover">
+                <thead>
+                    <tr class="table-danger">
+                        <th scope="col">ID</th>
+                        <th scope="col">DEVOURED Burgers</th>
+                        <th scope="col">Delete?</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                {{#each burger}}
+                {{#if devoured}}
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{burger_name}}</td>
+                    <td><button class="delete btn btn-danger" data-id={{id}}>Delete?</button></td>
+                </tr>
+                {{/if}}
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+body {
+    background: url('../img/burger.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+td, th {
+    padding: 2% 0% !important;
+}
+
+h1 {
+    font-size: 6vw !important;
+}
+
+@media screen and (max-width: 769px) {
+    td, th {
+        font-size: 4vw !important;
+    }
+    h1 {
+        font-size: 12vw !important;
+    }
+}
