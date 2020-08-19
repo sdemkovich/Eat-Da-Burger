@@ -1,22 +1,20 @@
-<div class="container-fluid mb-4">
-    <h1 class="text-center text-white display-3"><u>Eat-Da-Burger!</u></h1>
+<div class="jumbotron mb-4">
+    <h1 class="text-center text-black display-1">Eat-Da-Burger</h1>
 </div>
 
 <div class="container text-white mb-3">
     <div class="row">
-        <div class="col-12 col-md-4 text-center">
-            <h2>Add a Burger</h2>
-        </div>
-        <div class="col-12 col-md-4 text-center d-flex justify-content-center">
+        <div class="col-12 col-md-4">
+            <h2>Make a Burger</h2>
             <form class="form-inline">
                 <div class="form-group">
-                    <label class="col-form-label-lg mr-2">Name:</label>
+                    <label class="col-form-label-lg mr-2">New Burger:</label>
                     <input type="text" id="burger-text" class="form-control">
+                    <button type="submit" id="add-burger" class="btn btn-success">
+                        <i class="far fa-thumbs-up"></i>
+                    </button>
                 </div>
             </form>
-        </div>
-        <div class="col-12 col-md-4 text-center">
-            <button type="submit" id="add-burger" class="btn btn-success">Add Burger</button>
         </div>
     </div>
 </div>
@@ -29,7 +27,8 @@
             <table class="table table-light table-bordered table-striped table-hover">
                 <thead>
                     <tr class="table-primary">
-                        <th scope="col">ID</th>
+                        {{!-- <th scope="col">ID</th> --}}
+                        {{!-- <th scope="col">Image</th> --}}
                         <th scope="col">MENU</th>
                         <th scope="col">Devour?</th>
                     </tr>
@@ -40,9 +39,11 @@
                 {{#each burger}}
                 {{#unless devoured}}
                 <tr>
-                    <th scope="row">{{id}}</th>
-                    <td>{{burger_name}}</td>
-                    <td><button class="devour btn btn-primary" data-id={{id}}>Devour</button></td>
+                    {{!-- <th scope="row">{{id}}</th> --}}
+                    <td>{{burger_name}}
+                        <button class="devour btn btn-primary" data-id={{id}}>Devour</button>
+                    </td>
+                    {{!-- <td><button class="devour btn btn-primary" data-id={{id}}>Devour</button></td> --}}
                 </tr>
                 {{/unless}}
                 {{/each}}
@@ -53,9 +54,9 @@
             <table class="table table-light table-bordered table-striped table-hover">
                 <thead>
                     <tr class="table-danger">
-                        <th scope="col">ID</th>
+                        {{!-- <th scope="col">ID</th> --}}
                         <th scope="col">DEVOURED Burgers</th>
-                        <th scope="col">Delete?</th>
+                        <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,7 +65,7 @@
                 {{#each burger}}
                 {{#if devoured}}
                 <tr>
-                    <th scope="row">{{id}}</th>
+                    {{!-- <th scope="row">{{id}}</th> --}}
                     <td>{{burger_name}}</td>
                     <td><button class="delete btn btn-danger" data-id={{id}}>Delete?</button></td>
                 </tr>

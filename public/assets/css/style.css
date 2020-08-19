@@ -12,6 +12,10 @@ td, th {
 
 h1 {
     font-size: 6vw !important;
+    font-family: 'Fredoka One', cursive;
+}
+#add-burger{
+    margin-left: 7px;
 }
 
 @media screen and (max-width: 769px) {

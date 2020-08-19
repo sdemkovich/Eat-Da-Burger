@@ -30,12 +30,12 @@ $(function () {
 
     // Update burger to devoured on click
     $(".devour").on("click", function (event) {
-        var burgerID = $(this).data("id");
+        var burgerId = $(this).data("id");
 
         // Send the PUT request.
-        $.ajax("/api/burgers/" + burgerID, {
+        $.ajax("/api/burgers/" + burgerId, {
             type: "PUT",
-            data: burgerID
+            data: burgerId
         }).then(
             function () {
                 console.log("Devoured burger");
@@ -46,12 +46,12 @@ $(function () {
     });
 
     $(".delete").on("click", function (event) {
-        var burgerID = $(this).data("id");
+        var burgerId = $(this).data("id");
 
         // Send the PUT request.
-        $.ajax("/api/burgers/" + burgerID, {
+        $.ajax("/api/burgers/" + burgerId, {
             type: "DELETE",
-            data: burgerID
+            data: burgerId
         }).then(
             function () {
                 console.log("Deleted burger");
