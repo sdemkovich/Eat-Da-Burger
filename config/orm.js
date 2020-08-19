@@ -1,4 +1,3 @@
-// Import MySQL connection.
 var connection = require("../config/connection.js");
 
 // ORM will make SQL queries and callback results to Model
@@ -30,17 +29,17 @@ var orm = {
     },
 
     // CRUD: Update
-    updateOne: function (table, col, val, condition, value, cb) {
-        var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?" ;
+    // updateOne: function (table, col, val, condition, value, cb) {
+    //     var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?" ;
 
-        connection.query(queryString, [table, col, val, condition, value], function (err, result) {
-            if (err) {
-                throw err;
-            }
+    //     connection.query(queryString, [table, col, val, condition, value], function (err, result) {
+    //         if (err) {
+    //             throw err;
+    //         }
 
-            cb(result);
-        });
-    },
+    //         cb(result);
+    //     });
+    // },
 
     // CRUD: Delete
     deleteOne: function (table, condition, value, cb) {
