@@ -15,7 +15,6 @@ body {
 td, th {
     padding: 2% 0% !important;
 }
-
 h1 {
     font-size: 6vw !important;
     font-family: 'Fredoka One', cursive;
@@ -34,6 +33,11 @@ h1 {
     margin-left: 30px;
     margin-right: 30px;
 }
+.table-bordered > tbody > tr > td {
+  border: 1px solid #dddddd;
+  border-right-width:0px;
+  border-left-width:0px;
+}
 #lefthead {
     color: white;
     background-size: cover;
@@ -48,7 +52,6 @@ h1 {
     padding-bottom: 20px;
     padding-top: 20px;
     font-size: 20px;
-
 }
 
 @media screen and (max-width: 769px) {

@@ -22,25 +22,24 @@
 
 <div class="container-fluid text-center">
     <div class="row">
-
         <div class="col-12 col-lg-6">
             <table class="table table-light table-bordered table-hover">
                 <thead>
                     <tr class="bg-success">
-                        <td colspan="2" id="lefthead" ><strong>New Burgers</strong></td>
+                        <td colspan="2" id="lefthead"><strong>New Burgers</strong></td>
                     </tr>
                 </thead>
                 <tbody>
-
+                    {{#each burger}}
+                    {{#unless devoured}}
+                    <tr>
+                        <td>{{burger_name}}</td>
+                        <td><button class="devour btn btn-success" data-id={{id}}><i
+                                    class="fas fa-utensils"></i></button></td>
+                    </tr>
+                    {{/unless}}
+                    {{/each}}
                 </tbody>
-                {{#each burger}}
-                {{#unless devoured}}
-                <tr>
-                    <td>{{burger_name}}</td>
-                    <td><button class="devour btn btn-primary" data-id={{id}}><span class="fas fa-utensils"></span></button></td>
-                </tr>
-                {{/unless}}
-                {{/each}}
             </table>
         </div>
 
@@ -52,18 +51,18 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                    {{#each burger}}
+                    {{#if devoured}}
+                    <tr>
+                        <td>{{burger_name}}</td>
+                        <td><button class="delete btn btn-danger" data-id={{id}}>
+                            <i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    {{/if}}
+                    {{/each}}
                 </tbody>
-                {{#each burger}}
-                {{#if devoured}}
-                <tr>
-                    <td>{{burger_name}}</td>
-                    <td><button class="delete btn btn-danger" data-id={{id}}><i class="fas fa-trash-alt"></i></button></td>
-                </tr>
-                {{/if}}
-                {{/each}}
             </table>
         </div>
     </div>
 </div>
-
