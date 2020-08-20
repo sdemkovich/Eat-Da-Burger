@@ -8,7 +8,7 @@ Full stack, responsive logging app utilizing MySQL CRUD, Node, Express, Handleba
 3) Devour a Burger (Update)
 4) Delete Devoured Burgers (Delete)
 
-![gif]()
+![gif](./public/assets/img/Eat-Da-Burger.gif)
 
 ## Technologies
 * Node.js
@@ -26,7 +26,7 @@ To install necessary dependencies, run the following command:
 npm install 
 ``` 
 ## Finished Product
-View deployed Heroku app [here]()
+View deployed Heroku app [here](https://morning-ridge-88180.herokuapp.com/)
 
 
 ## Questions
