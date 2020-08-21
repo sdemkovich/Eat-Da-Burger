@@ -8,7 +8,7 @@ Full stack, responsive logging app utilizing MySQL CRUD, Node, Express, Handleba
 3) Devour a Burger (Update)
 4) Delete Devoured Burgers (Delete)
 
-![gif](./public/assets/img/Eat-Da-Burger.gif)
+![Eat-Da-burger](https://user-images.githubusercontent.com/61451081/90844679-505a3c80-e319-11ea-8e9d-c6ee038d99f1.gif)
 
 ## Technologies
 * Node.js
